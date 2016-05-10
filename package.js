@@ -1,19 +1,22 @@
 Package.describe({
   name: 'chompomonim:search-in',
-  version: '0.0.1',
-  // Brief, one-line summary of the package.
+  version: '0.1.0',
   summary: '',
-  // URL to the Git repository containing the source code for this package.
-  git: '',
-  // By default, Meteor will default to using README.md for documentation.
-  // To avoid submitting documentation, set this field to null.
+  git: 'https://github.com/chompomonim/meteor-searchIn',
   documentation: 'README.md'
+});
+
+Npm.depends({
+  unidecode: '0.1.8'
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('1.3.2.4');
-  api.use('ecmascript');
-  api.mainModule('search-in.js');
+  api.use([
+    'ecmascript',
+    'matb33:collection-hooks@0.8.1'
+    ]);
+  api.mainModule('search-in.js', 'server');
 });
 
 Package.onTest(function(api) {
