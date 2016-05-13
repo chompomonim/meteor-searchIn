@@ -40,3 +40,20 @@ And then you can use it in any place you have to search.
     }
   })
 ```
+
+## Usage from client
+
+If you want to search from client, you should write Meteor method for that.
+
+```JavaScript
+import { Meteor } from 'meteor/meteor';
+import { searchIn, getCollectionByName } from 'meteor/nous:search-in'
+
+// Register method to access search function from frontend.
+Meteor.methods({
+    searchIn: function (collection_name, txt, filter) {
+        let collection = getCollectionByName(collection_name)
+        return searchIn(collection, txt, filter)
+    }
+})
+```

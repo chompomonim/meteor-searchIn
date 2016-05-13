@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor'
 import { Mongo } from 'meteor/mongo'
 import unidecode from 'unidecode'
-import { range } from './utils'
+import { range, getCollectionByName } from './utils'
 
 function buildIndex (doc, projection) {
     let fields = projection.call(doc),
@@ -71,7 +71,5 @@ searchIn.register = (collection, index_by) => {
     searchIn.collections[collection._name] = true
 }
 
-// Register method to access search function from frontend.
-Meteor.methods({searchIn: searchIn})
-
+export getCollectionByName
 export default searchIn
