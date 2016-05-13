@@ -28,7 +28,7 @@ if (Meteor.isServer) {
 And then you can use it in any place you have to search.
 
 ```JavaScript
-  Meteor.call('searchIn', _collection, txt, filter.get(), (error, result) => {
+  Meteor.call('searchIn', _collection, txt, filter, (error, result) => {
     if (error) {
       alert(error.reason)
     }

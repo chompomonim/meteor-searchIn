@@ -1,7 +1,7 @@
 Package.describe({
-  name: 'chompomonim:search-in',
+  name: 'nous:search-in',
   version: '0.1.0',
-  summary: '',
+  summary: 'Search in Mongo collection for Meteor apps with transliteration support.',
   git: 'https://github.com/chompomonim/meteor-searchIn',
   documentation: 'README.md'
 });
@@ -22,6 +22,6 @@ Package.onUse(function(api) {
 Package.onTest(function(api) {
   api.use('ecmascript');
   api.use('tinytest');
-  api.use('chompomonim:search-in');
+  api.use('nous:search-in');
   api.mainModule('search-in-tests.js');
 });
