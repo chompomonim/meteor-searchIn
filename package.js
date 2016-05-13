@@ -1,6 +1,6 @@
 Package.describe({
   name: 'nous:search-in',
-  version: '0.2.0',
+  version: '0.2.1',
   summary: 'Search in Mongo collection for Meteor apps with transliteration support.',
   git: 'https://github.com/chompomonim/meteor-searchIn',
   documentation: 'README.md'

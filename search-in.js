@@ -34,11 +34,11 @@ function buildIndex (doc, projection) {
     }
 }
 
-export const searchIn = (collection, txt, filter) => {
+export function searchIn (collection, txt, filter) {
     if (!(collection instanceof Mongo.Collection))
         throw new Error(`Passed param is not a Mongo Collection.`)
 
-    if (searchIn.collections[collection_name] !== true)
+    if (searchIn.collections[collection._name] !== true)
         throw new Error("This collection is not registered in buildIndex")
 
     let normalized = unidecode(txt).toLowerCase()
