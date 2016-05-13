@@ -71,5 +71,5 @@ searchIn.register = (collection, index_by) => {
     searchIn.collections[collection._name] = true
 }
 
-export getCollectionByName
+export {getCollectionByName}
 export default searchIn

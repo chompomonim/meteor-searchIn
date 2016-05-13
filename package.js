@@ -1,6 +1,6 @@
 Package.describe({
   name: 'nous:search-in',
-  version: '0.2.1',
+  version: '0.2.2',
   summary: 'Search in Mongo collection for Meteor apps with transliteration support.',
   git: 'https://github.com/chompomonim/meteor-searchIn',
   documentation: 'README.md'
@@ -18,6 +18,7 @@ Package.onUse(function(api) {
     'lai:collection-extensions@0.2.1_1'
     ]);
   api.mainModule('search-in.js', 'server');
+  api.mainModule('utils.js', 'client');
 });
 
 Package.onTest(function(api) {
